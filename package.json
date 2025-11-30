@@ -4,9 +4,11 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build",
+    "build": "ng build --base-href https://bchampion.github.io/tournament/",
+    "deploy": "ng deploy --base-href https://bchampion.github.io/tournament/",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "test": "ng test",
+    "ghp": "npm run build && npm run deploy"
   },
   "prettier": {
     "printWidth": 100,
@@ -36,6 +38,7 @@
     "@angular/build": "^21.0.1",
     "@angular/cli": "^21.0.1",
     "@angular/compiler-cli": "^21.0.0",
+    "angular-cli-ghpages": "^2.0.3",
     "jsdom": "^27.1.0",
     "typescript": "~5.9.2",
     "vitest": "^4.0.8"
